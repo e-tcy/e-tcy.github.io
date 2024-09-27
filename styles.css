@@ -1,0 +1,93 @@
+
+body {
+  background-color: transparent;
+}
+
+:root {
+  background-image: linear-gradient(to bottom, #875eda, #738adf, #7970d3, #bc7be2, #875eda);
+  background-size: 100% 400vh;
+  animation: motion 5s infinite alternate;
+  animation: launch 3s forwards;
+  animation-timing-function: linear;
+}
+
+.container { 
+  display: grid;
+  justify-content: center;
+  place-items: center;
+  left: 10%;
+  top: 15%;
+}
+
+.hi {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  border-radius: 50px;
+  padding: 10px 25px;
+  width: fit-content;
+}
+
+.youtube {
+  position: absolute;
+  top: 35%;
+  right: 5%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  border-radius: 100px;
+  padding: 25px 35px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.etcy {
+  display: relative;
+  align-items: center;
+  width: 25%;
+  height: auto;
+  margin: 0 auto;
+  margin-left: 37.5%;
+  margin-top: 2.5%;
+  border-radius: 500px;
+}
+
+.clock {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 10%;
+  margin: 0 auto;
+  margin-top: 5%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  border-radius: 50px;
+  padding: 0px 20px;
+}
+
+.font {
+  font-family: 'Cascadia Mono', monospace;
+}
+
+@keyframes motion {
+  0% {
+    background-position-y: 0%;
+  }
+  100% {
+    background-position-y: 100%;
+  }
+}
+
+@keyframes launch {
+  0% {
+    opacity: 0;
+    filter: brightness(0.1);
+    filter: blur(100px)
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(0.8);
+    filter: blur(30px);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1);
+    filter: blur(0px)
+  }
+}
