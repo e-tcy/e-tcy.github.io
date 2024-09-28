@@ -1,13 +1,17 @@
 
+img:hover {
+  animation: hover 1s forwards;
+}
+
 body {
   background-color: transparent;
 }
 
 :root {
-  background-image: linear-gradient(to bottom, #875eda, #738adf, #7970d3, #bc7be2, #875eda);
+  background-image: linear-gradient(to bottom, #875eda, #738adf, #7970d3, #bc7be2);
   background-size: 100% 400vh;
+  animation: launch 4s forwards;
   animation: motion 5s infinite alternate;
-  animation: launch 3s forwards;
   animation-timing-function: linear;
 }
 
@@ -20,7 +24,9 @@ body {
 }
 
 .hi {
-  position: relative;
+  position: absolute;
+  top: 1.5%;
+  right: 37%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   border-radius: 50px;
   padding: 10px 25px;
@@ -33,7 +39,7 @@ body {
   right: 5%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   border-radius: 100px;
-  padding: 25px 35px;
+  padding: 30px 40px;
   width: fit-content;
   height: fit-content;
 }
@@ -45,24 +51,34 @@ body {
   height: auto;
   margin: 0 auto;
   margin-left: 37.5%;
-  margin-top: 2.5%;
-  border-radius: 500px;
+  margin-top: 10%;
+  border-radius: 250px;
 }
 
 .clock {
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  height: 10%;
-  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  display: relative;
+  width: 35%;
+  margin-left: 31.5%;
   margin-top: 5%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   border-radius: 50px;
   padding: 0px 20px;
+  text-align: center;
 }
 
 .font {
   font-family: 'Cascadia Mono', monospace;
+}
+
+@keyframes hover {
+  0% {
+    transform: scale(1)
+  }
+  100% {
+    transform: scale(1.1)
+  }
 }
 
 @keyframes motion {
