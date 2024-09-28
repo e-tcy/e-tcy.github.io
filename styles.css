@@ -10,8 +10,7 @@ body {
 :root {
   background-image: linear-gradient(to bottom, #875eda, #738adf, #7970d3, #bc7be2);
   background-size: 100% 400vh;
-  animation: launch 4s forwards;
-  animation: motion 5s infinite alternate;
+  animation: launch 4s forwards, motion 10s infinite alternate;;
   animation-timing-function: linear;
 }
 
