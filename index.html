@@ -12,29 +12,15 @@
   <meta name="description" content="sup, im a nerd, i love music and games. ">
   <meta name="keywords" content="3tcy, etcy, e-tcy, music">
   <meta name="author" content="3tcy">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" type="text/css" href="styles.css">
 
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/2.30.1/moment-timezone.min.js"></script>
-
-  <style>
-    #canvas {
-      width: 100%;
-      height: 100vh;
-      background-color: #000;
-    }
-  </style>
 </head>
-
-
-
-
 
 <!DOCTYPE html>
 <html class="font" lang="en">
@@ -43,11 +29,12 @@
     
     <div align="center" class="container">
 
-      <audio id="music" autoplay>
-        <script src="music.js"></script>
-      </audio>
+      <input type="image" src="assets/play.webp" width=50px height=50px id="playButton">
+      <p class="music" id="music-player"></p>
+      <audio class="music" id="music" paused></audio>
+      <script src="music.js"></script>
 
-      <p class="hi" align="center" style="font-size:48; color: #ffffff"> hi, i'm 3tcy! :3 </p>
+      <p class="hi" align="center" style="font-size:48"> hi, i'm 3tcy! :3 </p>
       
       <p align="right" class="youtube">
         <a href=https://youtube.com/@3tcy>
@@ -62,7 +49,7 @@
       </a>
       
       <div class="clock" align="center">
-        <p class="" style="font-size:36; color: #ffffff" id="timestamp"></p>  
+        <p class="" style="font-size:36" id="timestamp"></p>  
         <script src="clock.js"></script>
       </div>
 

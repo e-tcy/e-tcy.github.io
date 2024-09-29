@@ -9,22 +9,43 @@ body {
 
 :root {
   background-image: linear-gradient(to bottom, #875eda, #738adf, #7970d3, #bc7be2);
-  background-size: 100% 400vh;
-  animation: launch 4s forwards, motion 10s infinite alternate;;
+  background-size: 100% 800vh;
+  animation: launch 3s forwards, motion 10s infinite alternate;
   animation-timing-function: linear;
+  color: #ffffff;
 }
 
 .container { 
-  display: grid;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   place-items: center;
+  
+  margin-left: -2.5%;
   left: 10%;
   top: 15%;
+  gap: 10px;
+}
+
+.music-button {
+  grid-column: 1;
+  background-image: url(assets/play.webp);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.music {
+  top: 0%;
+  grid-column: 2;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  border-radius: 50px;
+  padding: 10px 25px;
 }
 
 .hi {
   position: absolute;
-  top: 1.5%;
+  top: 2.5%;
   right: 37%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   border-radius: 50px;
@@ -50,7 +71,7 @@ body {
   height: auto;
   margin: 0 auto;
   margin-left: 37.5%;
-  margin-top: 10%;
+  margin-top: 9%;
   border-radius: 250px;
 }
 
@@ -69,6 +90,7 @@ body {
 
 .font {
   font-family: 'Cascadia Mono', monospace;
+  font-style: italic;
 }
 
 @keyframes hover {
@@ -95,12 +117,12 @@ body {
     filter: brightness(0.1);
     filter: blur(100px)
   }
-  50% {
+  25% {
     opacity: 1;
     filter: brightness(0.8);
     filter: blur(30px);
   }
-  100% {
+  50% {
     opacity: 1;
     filter: brightness(1);
     filter: blur(0px)
