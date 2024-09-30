@@ -15,16 +15,23 @@ body {
   color: #ffffff;
 }
 
-.container { 
+.container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   place-items: center;
-  
   margin-left: -2.5%;
   left: 10%;
   top: 15%;
   gap: 10px;
+}
+
+.music-reroll {
+  grid-column: 3;
+  background-image: url(assets/reroll.webp);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
 }
 
 .music-button {
@@ -71,7 +78,7 @@ body {
   height: auto;
   margin: 0 auto;
   margin-left: 37.5%;
-  margin-top: 9%;
+  margin-top: 7%;
   border-radius: 250px;
 }
 

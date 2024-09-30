@@ -1,14 +1,13 @@
 const music = document.getElementById('music');
 const playButton = document.getElementById('playButton');
+const rerollButton = document.getElementById('rerollButton');
 let filename = ""
-const musicFiles = ["music\\choppy.ogg", "music\\trap.ogg", "music\\hyperpop.ogg"]
+const musicFiles = ['music\\choppy.ogg', 'music\\trap.ogg', 'music\\hyperpop.ogg', 'music\\demo.mp3', 'music\\adm1t.mp3'];
 
 function randPick() {
     const random = Math.floor(Math.random() * musicFiles.length)
     music.src = musicFiles[random]
-    music.volume = 0.25
-    music.play()
-    music.pause()
+    music.volume = 0.05 
     filename = music.src.split('\\').pop();
     document.getElementById('music-player').innerHTML = `now playing: ${filename}`;
 }
@@ -47,5 +46,14 @@ music.addEventListener('error', function() {
     randPick()
 })
 
+rerollButton.addEventListener('click', function() {
+    randPick()
+    music.play()
+    document.getElementById('playButton').src = 'assets/pause.webp';
+    document.getElementById('music-player').innerHTML = `now playing: ${filename}`;
+    console.log('rerolled')
+})
+
 randPick()
+music.pause()
 document.getElementById('music-player').innerHTML = `paused: ${filename}`;
